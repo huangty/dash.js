@@ -18,6 +18,7 @@ MediaPlayer.rules.BaseRulesCollection = function () {
 
     return {
         downloadRatioRule: undefined,
+        bufferBasedRule: undefined,
         insufficientBufferRule: undefined,
         //limitSwitchesRule: undefined,
 
@@ -30,7 +31,8 @@ MediaPlayer.rules.BaseRulesCollection = function () {
 
             self.getRules().then(
                 function (r) {
-                    r.push(self.downloadRatioRule);
+                    //r.push(self.downloadRatioRule);
+                    r.push(self.bufferBasedRule);
                     r.push(self.insufficientBufferRule);
                     //r.push(self.limitSwitchesRule);
                 }
